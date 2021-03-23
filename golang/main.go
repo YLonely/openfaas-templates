@@ -25,5 +25,5 @@ func main() {
 	handler.Initial()
 	web.Router("/", &mainController{})
 	web.Router("/_/health", &mainController{})
-	web.Run("127.0.0.1:8080")
+	web.Run("0.0.0.0:8080")
 }
