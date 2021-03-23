@@ -3,7 +3,7 @@ from flask import Request
 
 def handle(r: Request):
     # TODO: handle the request
-    input = r.form["input"]
+    input = r.get_data()
     return str(input)
 
 

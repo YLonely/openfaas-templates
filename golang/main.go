@@ -12,7 +12,7 @@ type mainController struct {
 }
 
 func (c *mainController) Post() {
-	if err := handler.Handle(c.Ctx.Request, c.Ctx.Request.Response); err != nil {
+	if err := handler.Handle(c.Ctx.ResponseWriter, c.Ctx.Request); err != nil {
 		log.Println(err)
 	}
 }
